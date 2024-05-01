@@ -1,0 +1,46 @@
+{
+  "name": "AutoDoc",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Make Google Docs quickly",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Make a new doc"
+  },
+  "icons": {
+    "48": "autodoc.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["script.js"]
+    }
+  ],
+  "commands": {
+    "make-doc": {
+      "suggested_key": {
+        "default": "Alt+T"
+      },
+      "description": "Make a new doc",
+      "enabled": true
+      },
+    "open-settings": {
+      "suggested_key": {
+        "default": "Alt+S"
+      },
+      "description": "Open settings",
+      "enabled": true
+      }
+  }
+}
+
