@@ -1,12 +1,15 @@
 var winId
 
-chrome.windows.getCurrent({populate: false}, function(window) {
+chrome.windows.getCurrent( function(window) {
     winId = window.id;
 });
 
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
+
+    
     const url = "https://script.google.com/macros/s/AKfycbzIwFJtzOoa9Rv8plt9PQRxOOMafj-Q8nGBeD8vJTzsf5X5i2lAR_jxlK9SP7qJjL5p/exec"
     const genBtn = document.getElementById("Genre");
     const questBtn = document.getElementById("Quest");
@@ -127,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (settingsBtn) {
         settingsBtn.addEventListener("click", function () { 
             chrome.sidePanel.open({ windowId: winId });
-            //document.location.href = "settings.html";
+
         });
     }
 });

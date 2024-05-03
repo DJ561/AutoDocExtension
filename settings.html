@@ -41,13 +41,18 @@
 </head>
 <h2 class="strokeme" style="text-align: center; letter-spacing: 1.3px;">AutoDoc Settings<img src="assets/settings-svgrepo-com.svg" style="width: 30x; height: 30px; vertical-align: middle; margin-left: 10px;"></h2>
 <body>
-    <label class="strokeme" for="sessionInput">Session:</label>
+    <label class="strokeme" for="nameInput">Your Name:</label>
+    <input type="text" id="nameInput" value="" >
+    <label class="strokeme" for="defaultDocNameInput">Default Doc Name:</label>
+    <input type="text" id="defaultDocNameInput" value="" >
+    <label class="strokeme" for="sessionInput" >Session:</label>
     <input type="text" id="sessionInput" value="">
-    <label class="strokeme" for="nameInput">Name:</label>
-    <input type="text" id="nameInput" value="">
     <button id="saveName">Save</button>
-    <script src="settings.js"></script>
 </body>
+<footer style="position: fixed; bottom: 0px; width: 100%;">
+    <label class="strokeme" for="advanced">Advanced mode:</label><input type="checkbox" id="advanced" checked>
+</footer>
+    <script src="settings.js"></script>
 
 </html>
 </html>

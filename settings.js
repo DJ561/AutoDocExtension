@@ -11,6 +11,5 @@ document.getElementById("saveName").addEventListener("click", function () {
 
     localStorage.setItem("name", name);
     localStorage.setItem("session", session);
-    //return to popup.html
-    document.location.href = "popup.html";
+    
     })
