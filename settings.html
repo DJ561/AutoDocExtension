@@ -2,9 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
     <style>
         body {
             background-color: #3498DB;
+            font-family: "Roboto", sans-serif;
         }
         
         input {
@@ -12,15 +14,16 @@
             margin: 10px auto;
             padding: 5px;
             border-radius: 5px;
-            width: 200px;
+            width: auto;
         }
         
         button {
             display: block;
             margin: 10px auto;
-            padding: 5px;
             border-radius: 5px;
+            padding: 5px;
             width: 70px;
+
         }
         
         label {
@@ -32,15 +35,11 @@
         .strokeme
         {
             color: white;
-            text-shadow:
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;  
+            text-shadow: none;
         }
     </style>
-    <title>Settings</title>
 </head>
+<h2 class="strokeme" style="text-align: center; letter-spacing: 1.3px;">AutoDoc Settings<img src="assets/settings-svgrepo-com.svg" style="width: 30x; height: 30px; vertical-align: middle; margin-left: 10px;"></h2>
 <body>
     <label class="strokeme" for="sessionInput">Session:</label>
     <input type="text" id="sessionInput" value="">
@@ -51,3 +50,5 @@
 </body>
 
 </html>
+</html>
+

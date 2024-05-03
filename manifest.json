@@ -10,7 +10,7 @@
   "icons": {
     "48": "autodoc.png"
   },
-  "permissions": ["activeTab","scripting","storage"],
+  "permissions": ["activeTab","scripting","storage","sidePanel"],
   "host_permissions": ["<all_urls>"],
   "background": {"service_worker": "background.js"},
   "content_scripts": [
@@ -19,6 +19,9 @@
       "js": ["popup.js"]
     }
   ],
+  "side_panel": {
+    "default_path": "settings.html"
+  },
   "commands": {
     "_execute_action": {
       "suggested_key": {
