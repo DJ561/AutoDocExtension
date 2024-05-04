@@ -8,14 +8,14 @@
     "description": "Make Google Docs quickly"
   },
   "icons": {
-    "48": "autodoc.png"
+    "48": "assets/autodoc.png"
   },
   "permissions": ["activeTab","scripting","storage","sidePanel"],
   "host_permissions": ["<all_urls>"],
   "background": {"service_worker": "background.js"},
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://journey.actonacademy.org/schools/*/studios/*/progress/users/**"],
       "js": ["content_scripts/custom.js"]
     }
   ],
@@ -27,7 +27,7 @@
       "suggested_key": {
         "default": "Alt+G"
       },
-      "description": "Make a new doc",
+      "description": "Open AutoDoc",
       "enabled": true
       },
     "make-doc": {
