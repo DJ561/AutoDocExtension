@@ -15,7 +15,7 @@ chrome.storage.local.get(["username", "session"], function(result) {
 
 document.addEventListener("DOMContentLoaded", function() {
     
-    const url = "https://script.google.com/macros/s/AKfycbzIwFJtzOoa9Rv8plt9PQRxOOMafj-Q8nGBeD8vJTzsf5X5i2lAR_jxlK9SP7qJjL5p/exec"
+    const url = "https://script.google.com/macros/s/AKfycbwXVB2f_GRDQQZBT5Gx4cb13obuA1cmF90dpdH6UAb4YWSE2FCi6cNlFji_BSr9FGK_/exec"
     const genBtn = document.getElementById("Genre");
     const questBtn = document.getElementById("Quest");
     const civBtn = document.getElementById("Civ");
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (settingsBtn) {
         settingsBtn.addEventListener("click", function () { 
             chrome.sidePanel.open({ windowId: winId });
-
+            //window.location.href = "settings.html";
         });
     }
 });

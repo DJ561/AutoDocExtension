@@ -3,8 +3,13 @@ setInterval(function(){
     var challange = existingElement.children[0];
     var btn = document.createElement("button");
     btn.textContent = "Make Doc";
+
+
+    //replace &amp; with & in the challenge so it dosent break the url
+    var challange_name = challange.innerHTML.replace(/&amp;/g, "&");
+
     btn.onclick = function() {
-        chrome.runtime.sendMessage({message: {"subject": subject, "challenge": challange.innerHTML}},
+        chrome.runtime.sendMessage({message: {"subject": subject, "challenge": challange_name}},
         function(response) {
         });
     }

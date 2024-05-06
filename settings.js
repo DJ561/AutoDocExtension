@@ -25,7 +25,7 @@ document.getElementById("saveName").addEventListener("click", function () {
     }).then(()=>{
 
     })
-    
+    //window.location.href = "popup.html";
     })
 
 

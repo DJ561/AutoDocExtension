@@ -4,11 +4,15 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
         console.log(result.username)
         var username = result.username
         var session = result.session
-        const url = "https://script.google.com/macros/s/AKfycbzUI1wJNw9sYF9wxPYvWbom8WVf8oxAgD8CEeCt7wk/dev"
+        const url = "https://script.google.com/macros/s/AKfycbwXVB2f_GRDQQZBT5Gx4cb13obuA1cmF90dpdH6UAb4YWSE2FCi6cNlFji_BSr9FGK_/exec"
 
         //parse the message and get the subject and challenge
         var subject = message.message.subject;
         var challenge = message.message.challenge;
+
+        //replace & in the challenge so it dosent break the url
+
+        challenge = challenge.replace(/&/g, "%26");
     
         console.log("Subject: " + subject);
         console.log("Challenge: " + challenge);
