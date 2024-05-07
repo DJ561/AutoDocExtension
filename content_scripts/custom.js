@@ -3,7 +3,7 @@ setInterval(function(){
     var challange = existingElement.children[0];
     var btn = document.createElement("button");
     btn.textContent = "Make Doc";
-
+    btn.style = "background-color: white; color: #525f7f; font-size: 12px; vertical-align: top; border-radius: 4px; border: 1.5px solid; border-color: #dce0e0; min-height: 24px; font-weight: bold;"
 
     //replace &amp; with & in the challenge so it dosent break the url
     var challange_name = challange.innerHTML.replace(/&amp;/g, "&");

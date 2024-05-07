@@ -91,8 +91,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (settingsBtn) {
         settingsBtn.addEventListener("click", function () { 
-            chrome.sidePanel.open({ windowId: winId });
-            //window.location.href = "settings.html";
+            //chrome.sidePanel.open({ windowId: winId });
+            window.location.href = "settings.html";
         });
     }
 });
